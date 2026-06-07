@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <title>To-Do List Web Application</title>
+    <style>
+      body {
+        background-color: whitesmoke;
+        font-family: "Times New Roman", Times, serif;
+      }
+      .container {
+        width: 450px;
+        margin: 40px auto;
+        background-color: lightblue;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      h2 {
+        text-align: center;
+      }
+      .input-box {
+        display: flex;
+        gap: 10px;
+      }
+      input[type="text"] {
+        flex: 1;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+      button {
+        padding: 10px 15px;
+        font-size: 15px;
+        gap: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      h3 {
+        margin-bottom: 20px;
+      }
+      .task {
+        padding: 10px;
+        margin-top: 20px;
+        gap: 10px;
+        border-radius: 10px;
+        background-color: lightgreen;
+        display: flex;
+      }
+      .completed-task {
+        padding: 20px;
+        margin-top: 20px;
+        gap: 20px;
+        border-radius: 10px;
+        background-color: bisque;
+        display: flex;
+      }
+      .count {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>To-Do List Web Application</h2>
+      <div class="input-box">
+        <input type="text" id="taskInput" placeholder="Enter the task" />
+        <button onclick="addTask()">Add</button>
+      </div>
+      <h3>
+        Task Pending
+        <span class="count">(<span id="pendingCount">0</span>)</span>
+      </h3>
+      <div id="taskList"></div>
+      <div id="completedTask">
+        <h3>
+          Task Completed
+          <span class="count">(<span id="completedCount">0</span>)</span>
+        </h3>
+      </div>
+    </div>
+    <script>
+      let pendingTasks = 0;
+      let completedTasks = 0;
+      function addTask() {
+        let input = document.getElementById("taskInput");
+        let taskText = input.value;
+        if (taskText == "") {
+          alert("Please enter the task");
+          return;
+        }
+        let taskDiv = document.createElement("div");
+        taskDiv.className = "task";
+        taskDiv.innerHTML = `<input type="radio" onchange="completeTask(this, '${taskText}')">
+       <span>${taskText}</span>`;
+        document.getElementById("taskList").appendChild(taskDiv);
+        pendingTasks++;
+        document.getElementById("pendingCount").innerText = pendingTasks;
+        input.value = "";
+      }
+      function completeTask(radioButton, taskText) {
+        let completedDiv = document.createElement("div");
+        completedDiv.className = "completed-task";
+        completedDiv.innerHTML = taskText;
+        document.getElementById("completedTask").appendChild(completedDiv);
+        radioButton.parentElement.remove();
+        pendingTasks--;
+        completedTasks++;
+        document.getElementById("pendingCount").innerText = pendingTasks;
+        document.getElementById("completedCount").innerText = completedTasks;
+      }
+    </script>
+  </body>
+</html>
