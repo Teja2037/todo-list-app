@@ -4,25 +4,25 @@ A simple and interactive To-Do List web application developed using HTML, CSS, a
 
 ## Features
 
-* Add new tasks instantly
-* Display pending tasks count
-* Mark tasks as completed
-* Display completed tasks count
-* Dynamic updates without page refresh
-* User-friendly interface
-* Lightweight and fast-loading application
-* Beginner-friendly JavaScript project
+- Add new tasks instantly
+- Display pending tasks count
+- Mark tasks as completed
+- Display completed tasks count
+- Dynamic updates without page refresh
+- User-friendly interface
+- Lightweight and fast-loading application
+- Beginner-friendly JavaScript project
 
 ## Technologies Used
 
-* HTML5
-* CSS3
-* JavaScript (Vanilla JS)
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
 
 ## Project Structure
 
 ```text
-Todo_Project/
+todo-list-app/
 │
 ├── todo project.html
 │
@@ -53,24 +53,24 @@ This project was developed to practice front-end web development concepts such a
 
 Through this project, developers can gain experience in:
 
-* JavaScript Functions
-* Event Handling
-* DOM Manipulation
-* Dynamic Content Updates
-* User Input Handling
-* Task Management Logic
-* Front-End Development Fundamentals
+- JavaScript Functions
+- Event Handling
+- DOM Manipulation
+- Dynamic Content Updates
+- User Input Handling
+- Task Management Logic
+- Front-End Development Fundamentals
 
 ## Future Enhancements
 
-* Add task deletion functionality
-* Add task editing functionality
-* Store tasks using Local Storage
-* Add task priorities
-* Add due dates and reminders
-* Improve UI responsiveness
-* Add drag-and-drop task management
-* Implement dark mode support
+- Add task deletion functionality
+- Add task editing functionality
+- Store tasks using Local Storage
+- Add task priorities
+- Add due dates and reminders
+- Improve UI responsiveness
+- Add drag-and-drop task management
+- Implement dark mode support
 
 ## Author
 
